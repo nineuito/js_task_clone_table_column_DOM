@@ -8,7 +8,8 @@ for (let i = 0; i < rows.length; i++) {
   const row = rows[i];
   const secondCell = row.cells[1];
   const newCell = secondCell.cloneNode(true);
-  const lastCellIndex = row.cells.length - 1;
+  const lastCell = row.cells[row.cells.length - 1]
 
-  row.insertBefore(newCell, row.cells[lastCellIndex]);
+  row.appendChild(newCell);
+  row.appendChild(lastCell);
 }
